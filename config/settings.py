@@ -24,6 +24,7 @@ SECRET_KEY = 'django-insecure-)f$zvd13np^#)u7%xeb_yn@@c6yo9xj7fk(6sim1q1=zh3+lev
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres', # H_W_19
+        'USER': 'postgres', #'D_I_A007'
+        'PASSWORD': '140713', # 75_Lubim_Mulatok.py,
+        'HOST': 'localhost', #'127.0.0.1',
+        'PORT': '5432'
     }
 }
 
@@ -104,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -124,3 +129,6 @@ STATICFILES_DIRS = (BASE_DIR / 'static',)
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
