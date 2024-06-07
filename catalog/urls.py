@@ -16,3 +16,8 @@ urlpatterns = [
     path('', home, name='home'),
     path('contacts/', contacts, name='contacts')
 ]
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', include('products.urls', namespace='products'))
+# ]
