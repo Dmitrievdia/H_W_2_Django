@@ -31,3 +31,4 @@ class Command(BaseCommand):
             )
 
             Product.objects.bulk_create(product_for_create) # Создаем объекты в базе с помощью метода bulk_create()
+            
