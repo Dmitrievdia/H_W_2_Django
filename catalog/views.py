@@ -29,4 +29,5 @@ def index(request):
     return render(request, 'base.html', context)
 
 # from django.shortcuts import render
+# kkk
 
