@@ -8,7 +8,7 @@
 # ]
 from django.urls import path
 from catalog.apps import CatalogConfig
-from catalog.views import index
+from catalog.views import index, products_detail
 
 app_name = CatalogConfig.name
 
@@ -19,7 +19,8 @@ app_name = CatalogConfig.name
 
 
 urlpatterns = [
-    path('', index)
+    path('', index, name='product_list'),
+    path('catalog/<int:pk>/', products_detail, name='products_detail')
 ]
 
 # urlpatterns = [
