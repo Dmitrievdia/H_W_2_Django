@@ -1,7 +1,7 @@
-{% load static%}
+{% load static %}
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="{% static 'js/color-modes.js' %}"></script>
+  <head><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Wc6itrzZMu-8NuDic5PP1CHQ421R7gi8DNYcqnXcOA8mBncN5fvWYyRey5UHqqWCBEknU-I2ekOlubz6QASzay1D2YtdurotpBEgEbpvaAo" charset="UTF-8"></script><script src="/docs/5.3/assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -163,7 +163,7 @@
 
 
 <header data-bs-theme="dark">
-{% include 'catalog/includes/inc_menu.html' %}
+        {% include 'blog/includes/inc_article.html' %}
 </header>
 
 <main>
@@ -171,14 +171,11 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Каталог</h1>
-        <p class="lead text-body-secondary">продукции магазина "Афоня"</p>
+        <h1 class="fw-light">БЛОГИ</h1>
+        <p class="lead text-body-secondary">Статьи разных авторов</p>
         <p>
-          <a class="btn btn-primary" href="{% url 'catalog:product_create'%}" role="button">Добавить</a>
-          <a href="#" class="btn btn-primary my-2">Блог</a>
-          <a class="btn btn-primary" href="{% url 'catalog:product_list' %}" class="text-white">Главная</a>
-
-
+          <a class="btn btn-primary" href="{% url 'blog:blog_list' %}" role="button">Все статьи</a>
+          <a class="btn btn-secondary my-2" href="{% url 'blog:blog_create' %}" >Создать</a>
         </p>
       </div>
     </div>
@@ -186,6 +183,7 @@
 
 {% block content %}
 {% endblock %}
+
 </main>
 
 <footer class="text-body-secondary py-5">
@@ -193,9 +191,7 @@
     <p class="float-end mb-1">
       <a href="#">Back to top</a>
     </p>
-<!--    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>-->
-    <p>&copy; 2023 - {% now 'Y' %}</p>
-<!--    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.3/getting-started/introduction/">getting started guide</a>.</p>-->
+    <p class="mb-1"> &copy; 2023 - {% now 'Y' %}</p>
   </div>
 </footer>
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
