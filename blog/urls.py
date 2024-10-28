@@ -5,11 +5,19 @@ from blog.views import ArticleCreateView, ArticleListView, ArticleDetailView, Ar
 app_name = BlogConfig.name
 
 urlpatterns = [
-    path('blog/create/', ArticleCreateView.as_view(), name='blog_create'),
-    path('blog/', ArticleListView.as_view(), name='blog_list'),
+    path('', ArticleListView.as_view(), name='blog_list'),
+    path('blog/create', ArticleCreateView.as_view(), name='blog_create'),
     path('blog/<int:pk>/', ArticleDetailView.as_view(), name='blog_detail'),
     path('blog/<int:pk>/update/', ArticleUpdateView.as_view(), name='blog_update'),
     path('blog/<int:pk>/delete/', ArticleDeleteView.as_view(), name='blog_delete'),
 ]
+
+# urlpatterns = [
+#     path('blog/create/', ArticleCreateView.as_view(), name='blog_create'),
+#     path('blog/', ArticleListView.as_view(), name='blog_list'),
+#     path('blog/<int:pk>/', ArticleDetailView.as_view(), name='blog_detail'),
+#     path('blog/<int:pk>/update/', ArticleUpdateView.as_view(), name='blog_update'),
+#     path('blog/<int:pk>/delete/', ArticleDeleteView.as_view(), name='blog_delete'),
+# ]
 
 

@@ -23,9 +23,10 @@ class Article(models.Model):
     )
     created_at = models.DateField(
         **NULLABLE,
+        auto_now_add=True,
         verbose_name="Дата создания",
         help_text="Укажите дату создания",
-        default=timezone.now()
+        # default=timezone.now()
     )
     published = models.BooleanField(
         verbose_name="Признак публикации",
